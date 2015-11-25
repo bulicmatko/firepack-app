@@ -815,31 +815,39 @@ var Main = (function (_Component) {
     _createClass(Main, [{
         key: '_userShouldBeGuest',
         value: function _userShouldBeGuest(nextState, replaceState) {
+            var basePath = this.props.basePath;
+
             if (!_UserStore2.default.isUserGuest()) {
-                replaceState({}, '/dashboard');
+                replaceState({}, basePath + '/dashboard');
             }
         }
     }, {
         key: '_userShouldBeAuthenticated',
         value: function _userShouldBeAuthenticated(nextState, replaceState) {
+            var basePath = this.props.basePath;
+
             if (!_UserStore2.default.isUserAuthenticated()) {
-                replaceState({ nextPathname: nextState.location.pathname }, '/auth');
+                replaceState({ nextPathname: nextState.location.pathname }, basePath + '/auth');
             }
         }
     }, {
         key: 'render',
         value: function render() {
+            var _props = this.props;
+            var basePath = _props.basePath;
+            var firebaseUrl = _props.firebaseUrl;
+
             return _react2.default.createElement(
                 _reactRouter.Router,
                 { history: (0, _history.createHistory)() },
-                _react2.default.createElement(_reactRouter.Redirect, { from: '/', to: '/auth' }),
+                _react2.default.createElement(_reactRouter.Redirect, { from: basePath, to: basePath + '/auth' }),
                 _react2.default.createElement(
                     _reactRouter.Route,
-                    { path: '/', component: _Layout2.default },
-                    (0, _Router2.default)({ basePath: 'auth', onEnter: this._userShouldBeGuest }),
-                    (0, _Router4.default)({ basePath: 'dashboard', onEnter: this._userShouldBeAuthenticated }),
-                    (0, _Router6.default)({ basePath: 'settings', onEnter: this._userShouldBeAuthenticated }),
-                    (0, _Router8.default)({ basePath: 'apps', onEnter: this._userShouldBeAuthenticated, children: this.props.children }),
+                    { path: basePath, component: _Layout2.default },
+                    (0, _Router2.default)({ basePath: 'auth', onEnter: this._userShouldBeGuest.bind(this) }),
+                    (0, _Router4.default)({ basePath: 'dashboard', onEnter: this._userShouldBeAuthenticated.bind(this) }),
+                    (0, _Router6.default)({ basePath: 'settings', onEnter: this._userShouldBeAuthenticated.bind(this) }),
+                    (0, _Router8.default)({ basePath: 'apps', onEnter: this._userShouldBeAuthenticated.bind(this), children: this.props.children }),
                     (0, _Router10.default)({ basePath: '*' })
                 )
             );
@@ -851,6 +859,14 @@ var Main = (function (_Component) {
 
 // Export Main
 
+Main.propTypes = {
+    basePath: _react.PropTypes.string,
+    firebaseUrl: _react.PropTypes.string.isRequired
+};
+Main.defaultProps = {
+    basePath: '/',
+    firebaseUrl: undefined
+};
 exports.default = Main;
 
 },{"./Layout":9,"./_lib/styles/main.scss":15,"./components/Apps/Router":20,"./components/Auth/Router":23,"./components/Dashboard/Router":28,"./components/Error/Router":30,"./components/Settings/Router":35,"./stores/UserStore":67,"history":85,"react":357,"react-router":195}],11:[function(require,module,exports){
@@ -49143,14 +49159,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 var AppRoutes = function AppRoutes(_ref) {
-    var _ref$baseUrl = _ref.baseUrl;
-    var baseUrl = _ref$baseUrl === undefined ? 'fifa-tracker' : _ref$baseUrl;
+    var _ref$basePath = _ref.basePath;
+    var basePath = _ref$basePath === undefined ? 'template' : _ref$basePath;
 
-    _Constants2.default.BaseUrl = baseUrl;
+    _Constants2.default.BaseUrl = basePath;
 
     return _react2.default.createElement(
         _reactRouter.Route,
-        { path: baseUrl, component: _App2.default },
+        { path: basePath, component: _App2.default },
         _react2.default.createElement(_reactRouter.IndexRoute, { component: _DashboardComponent2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: 'dashboard', component: _DashboardComponent2.default }),
         _react2.default.createElement(_reactRouter.Route, { path: '*', component: _ErrorComponent2.default })
@@ -49191,8 +49207,8 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 _reactDom2.default.render(_react2.default.createElement(
     _firepack2.default,
-    null,
-    (0, _index2.default)({ baseUrl: 'template' })
+    { basePath: '/firepack-app', firebaseUrl: 'https://fifa-tracker.firebaseio.com' },
+    (0, _index2.default)({ basePath: 'template' })
 ), document.getElementById('Firepack'));
 
 },{"./apps/template/index":370,"firepack":10,"react":357,"react-dom":175}],372:[function(require,module,exports){
