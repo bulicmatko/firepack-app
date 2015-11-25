@@ -9,12 +9,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import Firepack from 'firepack';
-import TemplateApp from './apps/template/index';
 
-// Render App
+import TemplateAppRouter from './apps/template/Router';
+
+const FirepackConfig = {
+    basePath: '/',
+    firebaseUrl: 'https://fifa-tracker.firebaseio.com',
+    apps: [
+        {
+            _id: 'template',
+            icon: 'rocket',
+            title: 'Template',
+            route: '/apps/template'
+        }
+    ]
+};
+
 ReactDOM.render(
-    <Firepack basePath="/firepack-app" firebaseUrl="https://fifa-tracker.firebaseio.com">
-        {TemplateApp({basePath: 'template'})}
+    <Firepack {...FirepackConfig}>
+
+        {TemplateAppRouter({basePath: 'template'})}
+
     </Firepack>,
     document.getElementById('Firepack')
 );

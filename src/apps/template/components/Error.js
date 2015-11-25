@@ -1,28 +1,27 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Error Component
+    Error
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-
-// React
-import React from 'react';
+import React, { Component } from 'react';
 
 /**
- *  Error Component
+ *  Error
  */
-class ErrorComponent extends React.Component {
+class Error extends Component {
 
     render () {
         return (
-            <section className="ErrorComponent">
+            <div>
                 <h1>Error</h1>
-            </section>
+                <p>Whoops...</p>
+            </div>
         );
     }
 
 }
 
-// Export Error Component
-export default ErrorComponent;
+// Export Error
+export default Error;

@@ -1,26 +1,24 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Index
+    Router
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+import _ from 'lodash';
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Constants from './constants/Constants';
+import Layout from './Layout';
+import DashboardComponent from './components/Dashboard';
+import ErrorComponent from './components/Error';
 
-import App from './App';
-import DashboardComponent from './components/DashboardComponent';
-import ErrorComponent from './components/ErrorComponent';
-
-// Define App Routes
-const AppRoutes = ({basePath = 'template'}) => {
-
-    Constants.BaseUrl = basePath;
-
+/**
+ *  Router
+ */
+const Router = ({basePath = 'template', onEnter = _.noop}) => {
     return (
-        <Route path={basePath} component={App}>
+        <Route path={basePath} onEnter={onEnter} component={Layout}>
             <IndexRoute component={DashboardComponent}/>
 
             <Route path="dashboard" component={DashboardComponent}/>
@@ -28,8 +26,7 @@ const AppRoutes = ({basePath = 'template'}) => {
             <Route path="*" component={ErrorComponent}/>
         </Route>
     );
-
 };
 
-// Export AppRoutes
-export default AppRoutes;
+// Export Router
+export default Router;
