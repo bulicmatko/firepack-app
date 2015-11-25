@@ -17,7 +17,7 @@ class ErrorComponent extends React.Component {
     render () {
         return (
             <section className="ErrorComponent">
-                <h1>Error 404</h1>
+                <h1>Error</h1>
             </section>
         );
     }

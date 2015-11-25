@@ -8,13 +8,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Firebox from '../node_modules/firebox/src/Main';
-import FifaTrackerApp from './fifa-tracker/index';
+import Firepack from 'firepack';
+import TemplateApp from './apps/template/index';
 
 // Render App
 ReactDOM.render(
-    <Firebox>
-        {FifaTrackerApp({baseUrl: 'fifa-tracker'})}
-    </Firebox>,
-    document.getElementById('Firebox')
+    <Firepack>
+        {TemplateApp({baseUrl: 'template'})}
+    </Firepack>,
+    document.getElementById('Firepack')
 );

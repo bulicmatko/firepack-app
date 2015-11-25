@@ -2,10 +2,10 @@
 > [Firepack](https://github.com/bulicmatko/firepack/) application template.
 
 ### DISCLAIMER
-**Firepack App** is in a very **early phase of development** and can be a **subject of breaking changes** in near future.
+**Firepack App** is in a very **early phase of development** and can be a **subject of breaking changes** in near future development.
 
 ## Idea
-**Firepack App** shoul be a [Firepack](https://bulicmatko.github.io/firepack/) application starter template.
+**Firepack App** should be a [Firepack](https://bulicmatko.github.io/firepack/) application starter template.
 
 ## Demo
 To see it in action please check the [demo](https://bulicmatko.github.io/firepack-app/).
