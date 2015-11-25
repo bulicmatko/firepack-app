@@ -15,12 +15,12 @@ import DashboardComponent from './components/DashboardComponent';
 import ErrorComponent from './components/ErrorComponent';
 
 // Define App Routes
-const AppRoutes = ({baseUrl = 'fifa-tracker'}) => {
+const AppRoutes = ({basePath = 'template'}) => {
 
-    Constants.BaseUrl = baseUrl;
+    Constants.BaseUrl = basePath;
 
     return (
-        <Route path={baseUrl} component={App}>
+        <Route path={basePath} component={App}>
             <IndexRoute component={DashboardComponent}/>
 
             <Route path="dashboard" component={DashboardComponent}/>
