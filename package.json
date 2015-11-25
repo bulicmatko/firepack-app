@@ -1,0 +1,28 @@
+{
+  "name": "firepack-app",
+  "version": "0.0.0-dev",
+  "description": "Firepack application template.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bulicmatko/firepack-app.git"
+  },
+  "keywords": [
+    "firepack",
+    "firebase",
+    "react",
+    "react-router",
+    "flux",
+    "application",
+    "template"
+  ],
+  "author": "Matko Bulic <bulicmatko@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bulicmatko/firepack-app/issues"
+  },
+  "homepage": "https://github.com/bulicmatko/firepack-app#readme"
+}
