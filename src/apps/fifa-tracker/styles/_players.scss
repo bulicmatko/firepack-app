@@ -1,0 +1,218 @@
+.PlayersListComponent {
+  .navbar form {
+    padding: 0;
+
+    .form-control {
+      padding: rem(9) rem(10) rem(7);
+      width: rem(300); height: auto;
+    }
+  }
+}
+
+.TeamsTableComponent {
+  width: 100%;
+
+  > thead {
+    line-height: rem(60);
+    border-bottom: rem(3) double map-get($COLORS, Pearl);
+  }
+
+  .rank, .matches-played, .wins, .draws, .losses, .goals-for, .goals-against, .goal-difference, .points {
+    text-align: center;
+    width: rem(50);
+  }
+
+  .team {
+    text-align: left;
+    padding-left: rem(10);
+  }
+}
+
+.TeamsTableRowComponent {
+  @include transition(background-color 0.3s);
+  line-height: rem(50);
+  border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+  &:hover {
+    background-color: map-get($COLORS, Lilia);
+  }
+
+  > .team {
+
+    > img {
+      vertical-align: middle;
+      width: rem(25); height: rem(25);
+      margin-right: rem(10);
+    }
+  }
+
+  > .name {
+    text-align: left;
+  }
+}
+
+
+
+.PlayersTableComponent {
+  width: 100%;
+
+  > thead {
+    line-height: rem(60);
+    border-bottom: rem(3) double map-get($COLORS, Pearl);
+  }
+
+  .rank, .yellow-cards, .red-cards, .assists, .goals {
+    text-align: center;
+    width: rem(50);
+  }
+
+  th.yellow-cards > span {
+    display: inline-block;
+    line-height: 1;
+    padding: rem(5);
+    background-color: map-get($COLORS, Daisy);
+    border-radius: rem(3);
+  }
+
+  th.red-cards > span {
+    display: inline-block;
+    line-height: 1;
+    padding: rem(5);
+    color:  map-get($COLORS, White);
+    background-color: map-get($COLORS, Ruby);
+    border-radius: rem(3);
+  }
+
+  .player {
+    text-align: left;
+    padding-left: rem(10);
+  }
+}
+
+.PlayersTableRowComponent {
+  @include transition(background-color 0.3s);
+  // line-height: rem(50);
+  border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+  &:hover {
+    background-color: map-get($COLORS, Lilia);
+  }
+
+  > td {
+    vertical-align: middle;
+  }
+
+  a {
+    color: map-get($COLORS, Raven);
+  }
+
+  > .player {
+
+    small {
+      color: map-get($COLORS, Sterling);
+    }
+
+    > .profileImage {
+      margin-right: rem(10);
+      position: relative;
+      display: inline-block;
+
+      > .image {
+        width: rem(35); height: rem(35);
+        border: rem(1) solid map-get($COLORS, Lilia);
+        border-radius: 50%;
+        vertical-align: middle;
+        background-color: map-get($COLORS, White);
+      }
+
+      > .emblem {
+        position: absolute;
+        bottom: rem(5); right: rem(-5);
+        width: rem(20); height: rem(20);
+      }
+    }
+  }
+
+  > .name {
+    text-align: left;
+  }
+}
+
+.MatchesTableComponent {
+  width: 100%;
+
+  > thead {
+    line-height: rem(60);
+    border-bottom: rem(3) double map-get($COLORS, Pearl);
+  }
+
+  .date, .result {
+    text-align: center;
+    width: rem(130);
+  }
+
+  .home-team {
+    text-align: right;
+  }
+
+  .away-team {
+    text-align: left;
+  }
+}
+
+.MatchesTableRowComponent {
+  @include transition(background-color 0.3s);
+  line-height: rem(60);
+  border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+  &:hover {
+    background-color: map-get($COLORS, Lilia);
+  }
+
+  .result {
+    font-size: rem(20);
+  }
+
+  td.date {
+    color: map-get($COLORS, Asher);
+  }
+
+  .home-team, .away-team {
+
+    img {
+      vertical-align: middle;
+      width: rem(25); height: rem(25);
+    }
+  }
+
+  .home-team img {
+    margin-left: rem(10);
+  }
+
+  .away-team img {
+      margin-right: rem(10);
+  }
+}
+
+
+
+
+.TeamDetailsComponent, .PlayerDetailsComponent {
+
+  .team-data {
+    // @include clearfix();
+
+    .image {
+      float: left;
+
+      > img {
+        width: rem(80); height: rem(80);
+      }
+    }
+
+    > .name {
+      font-size: rem(30);
+      margin-left: rem(100);
+    }
+  }
+}

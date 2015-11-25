@@ -1,0 +1,1 @@
+console.error("Error: Parsing file /Users/bulicmatko/Sites/projects/development/firebox-app/node_modules/firebox/src/Main.js: 'import' and 'export' may appear only with 'sourceType: module' (8:0)");

@@ -1,0 +1,334 @@
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+//  Team Details Component
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+//  Team Details Component
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+// Player Card
+.PlayerCard {
+  @include clearfix();
+  padding: rem(5) 0;
+
+  .image {
+    position: relative; overflow: hidden;
+    float: left; width: rem(50); height: rem(50);
+    background-color: map-get($COLORS, White);
+    border: rem(3) solid map-get($COLORS, White);
+    border-radius: 50%; box-sizing: border-box;
+
+    img {
+      position: absolute;
+      width: 100%; height: 100%;
+    }
+  }
+
+  .data {
+    margin-left: rem(50);
+    padding: rem(5) rem(10);
+
+    .name {
+      font-size: rem(16); line-height: rem(25);
+      color: map-get($COLORS, Raven); font-weight: normal;
+      text-transform: none;
+    }
+
+    .team {
+      font-size: rem(12); line-height: rem(15);
+      color: map-get($COLORS, Sterling); font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.TeamDetailsComponent {
+
+  .row {
+    @include clearfix();
+    margin: 0 rem(-15); padding: 0 rem(15);
+  }
+
+  .col {
+    float: left;
+    padding: 0 rem(15); box-sizing: border-box;
+
+    &.col-1-1 {
+      width: 100%;
+    }
+
+    &.col-1-2 {
+      width: percentage(1/2);
+    }
+  }
+
+  .team-data {
+    @include clearfix();
+    padding: rem(30) 0 rem(35); margin-bottom: rem(35);
+    border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+    .team-emblem {
+      float: left;
+      width: rem(150); height: rem(150);
+
+      > img {
+        width: 100%; height: 100%;
+      }
+    }
+
+    .team-info {
+      margin-left: rem(150); padding-left: rem(30);
+
+      .team-name {
+        font-size: rem(50);
+        padding: rem(15) 0 rem(10);
+      }
+
+      .team-stats {
+
+        table {
+          text-align: center;
+
+          thead {
+            border-bottom: rem(3) double map-get($COLORS, Pearl);
+          }
+
+          tr {
+            // line-height: rem(40);
+
+            th, td {
+              width: rem(50);
+              // padding-left: rem(5);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+      ul.team-form {
+        @include clearfix();
+
+        li {
+          font-size: rem(15); //line-height: rem(25);
+          color: map-get($COLORS, White); text-align: center;
+          float: left; width: rem(25);
+          margin-right: rem(5); padding: 0 rem(5);
+          border-radius: rem(2);
+        }
+
+        li.form-win {
+          background-color: map-get($COLORS, Kelly);
+        }
+        li.form-draw {
+          background-color: map-get($COLORS, Daisy);
+        }
+        li.form-loss {
+          background-color: map-get($COLORS, Ruby);
+        }
+      }
+
+
+// .TeamsTableComponent {
+//   width: 100%;
+
+//   > thead {
+//     line-height: rem(60);
+//     border-bottom: rem(3) double map-get($COLORS, Pearl);
+//   }
+
+//   .rank, .matches-played, .wins, .draws, .losses, .goals-for, .goals-against, .goal-difference, .points {
+//     text-align: center;
+//     width: rem(50);
+//   }
+
+//   .team {
+//     text-align: left;
+//     padding-left: rem(10);
+//   }
+// }
+
+// .TeamsTableRowComponent {
+//   @include transition(background-color 0.3s);
+//   line-height: rem(50);
+//   border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+//   &:hover {
+//     background-color: map-get($COLORS, Lilia);
+//   }
+
+//   > .team {
+
+//     > img {
+//       vertical-align: middle;
+//       width: rem(25); height: rem(25);
+//       margin-right: rem(10);
+//     }
+//   }
+
+//   > .name {
+//     text-align: left;
+//   }
+// }
+
+
+
+// .PlayersTableComponent {
+//   width: 100%;
+
+//   > thead {
+//     line-height: rem(60);
+//     border-bottom: rem(3) double map-get($COLORS, Pearl);
+//   }
+
+//   .rank, .yellow-cards, .red-cards, .assists, .goals {
+//     text-align: center;
+//     width: rem(50);
+//   }
+
+//   th.yellow-cards > span {
+//     display: inline-block;
+//     line-height: 1;
+//     padding: rem(5);
+//     background-color: map-get($COLORS, Daisy);
+//     border-radius: rem(3);
+//   }
+
+//   th.red-cards > span {
+//     display: inline-block;
+//     line-height: 1;
+//     padding: rem(5);
+//     color:  map-get($COLORS, White);
+//     background-color: map-get($COLORS, Ruby);
+//     border-radius: rem(3);
+//   }
+
+//   .player {
+//     text-align: left;
+//     padding-left: rem(10);
+//   }
+// }
+
+// .PlayersTableRowComponent {
+//   @include transition(background-color 0.3s);
+//   line-height: rem(80);
+//   border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+//   &:hover {
+//     background-color: map-get($COLORS, Lilia);
+//   }
+
+//   > .player {
+
+//     small {
+//       color: map-get($COLORS, Sterling);
+//     }
+
+//     > .profileImage {
+//       margin-right: rem(20);
+//       position: relative;
+//       display: inline-block;
+
+//       > .image {
+//         width: rem(60); height: rem(60);
+//         border: rem(1) solid map-get($COLORS, Lilia);
+//         border-radius: 50%;
+//         vertical-align: middle;
+//         background-color: map-get($COLORS, White);
+//       }
+
+//       > .emblem {
+//         position: absolute;
+//         bottom: rem(5); right: rem(-5);
+//         width: rem(20); height: rem(20);
+//       }
+//     }
+//   }
+
+//   > .name {
+//     text-align: left;
+//   }
+// }
+
+// .MatchesTableComponent {
+//   width: 100%;
+
+//   > thead {
+//     line-height: rem(60);
+//     border-bottom: rem(3) double map-get($COLORS, Pearl);
+//   }
+
+//   .date, .result {
+//     text-align: center;
+//     width: rem(130);
+//   }
+
+//   .home-team {
+//     text-align: right;
+//   }
+
+//   .away-team {
+//     text-align: left;
+//   }
+// }
+
+// .MatchesTableRowComponent {
+//   @include transition(background-color 0.3s);
+//   line-height: rem(60);
+//   border-bottom: rem(1) solid map-get($COLORS, Lilia);
+
+//   &:hover {
+//     background-color: map-get($COLORS, Lilia);
+//   }
+
+//   .result {
+//     font-size: rem(20);
+//   }
+
+//   td.date {
+//     color: map-get($COLORS, Asher);
+//   }
+
+//   .home-team, .away-team {
+
+//     img {
+//       vertical-align: middle;
+//       width: rem(25); height: rem(25);
+//     }
+//   }
+
+//   .home-team img {
+//     margin-left: rem(10);
+//   }
+
+//   .away-team img {
+//       margin-right: rem(10);
+//   }
+// }
+
+
+
+
+// .TeamDetailsComponent, .PlayerDetailsComponent {
+
+//   .team-data {
+//     // @include clearfix();
+
+//     .image {
+//       float: left;
+
+//       > img {
+//         width: rem(80); height: rem(80);
+//       }
+//     }
+
+//     > .name {
+//       font-size: rem(30);
+//       margin-left: rem(100);
+//     }
+//   }
+// }
