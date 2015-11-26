@@ -13,22 +13,30 @@ import { Link } from 'react-router';
  */
 class Layout extends Component {
 
+    _renderSidebarTitle () {
+        return (
+            <h3 className="title">
+                <i className="fa fa-fw fa-rocket"></i>
+                <span>Firepack App</span>
+            </h3>
+        );
+    }
+
+    _renderSidebarMenu () {
+        return (
+            <ul>
+                <li><Link to="/apps/example-app/dashboard">Dashboard</Link></li>
+                <li><Link to="/apps/example-app/error-example">Error Example</Link></li>
+            </ul>
+        );
+    }
+
     render () {
         return (
             <div className="App">
                 <div className="App--Sidebar">
-                    <h3 className="title">
-                        <i className="fa fa-fw fa-rocket"></i>
-                        <span>Firepack App</span>
-                    </h3>
-                    <ul>
-                        <li>
-                            <Link to="/apps/template/dashboard">Dashboard</Link>
-                        </li>
-                        <li>
-                            <Link to="/apps/template/hohoho">Error</Link>
-                        </li>
-                    </ul>
+                    {this._renderSidebarTitle()}
+                    {this._renderSidebarMenu()}
                 </div>
                 <div className="App--Main">
                     {this.props.children}

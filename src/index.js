@@ -1,35 +1,32 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    App
+    Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
 import Firepack from 'firepack';
 
-import TemplateAppRouter from './apps/template/Router';
+import ExampleAppRouter from './apps/example-app/Router';
 
 const FirepackConfig = {
     basePath: '/',
     firebaseUrl: 'https://fifa-tracker.firebaseio.com',
-    apps: [
+    appsList: [
         {
-            _id: 'template',
+            _id: 'example-app',
             icon: 'rocket',
-            title: 'Template',
-            route: '/apps/template'
+            title: 'Example App',
+            route: 'example-app'
         }
     ]
 };
 
 ReactDOM.render(
     <Firepack {...FirepackConfig}>
-
-        {TemplateAppRouter({basePath: 'template'})}
-
+        {ExampleAppRouter({basePath: 'example-app'})}
     </Firepack>,
-    document.getElementById('Firepack')
+    document.getElementById('App')
 );

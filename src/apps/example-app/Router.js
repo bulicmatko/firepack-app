@@ -16,14 +16,14 @@ import ErrorComponent from './components/Error';
 /**
  *  Router
  */
-const Router = ({basePath = 'template', onEnter = _.noop}) => {
+const Router = ({basePath = 'todo-app', onEnter = _.noop}) => {
     return (
         <Route path={basePath} onEnter={onEnter} component={Layout}>
-            <IndexRoute component={DashboardComponent}/>
+            <IndexRoute onEnter={onEnter} component={DashboardComponent}/>
 
-            <Route path="dashboard" component={DashboardComponent}/>
+            <Route path="dashboard" onEnter={onEnter} component={DashboardComponent}/>
 
-            <Route path="*" component={ErrorComponent}/>
+            <Route path="*" onEnter={onEnter} component={ErrorComponent}/>
         </Route>
     );
 };
