@@ -9,23 +9,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Firepack from 'firepack';
 
+import Config from './Config';
+
 import ExampleAppRouter from './apps/example-app/Router';
 
-const FirepackConfig = {
-    basePath: '/',
-    firebaseUrl: 'https://fifa-tracker.firebaseio.com',
-    appsList: [
-        {
-            _id: 'example-app',
-            icon: 'rocket',
-            title: 'Example App',
-            route: 'example-app'
-        }
-    ]
-};
-
+/**
+ *  Render App
+ */
 ReactDOM.render(
-    <Firepack {...FirepackConfig}>
+    <Firepack {...Config}>
         {ExampleAppRouter({basePath: 'example-app'})}
     </Firepack>,
     document.getElementById('App')

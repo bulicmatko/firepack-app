@@ -17,7 +17,7 @@ class Layout extends Component {
         return (
             <h3 className="title">
                 <i className="fa fa-fw fa-rocket"></i>
-                <span>Firepack App</span>
+                <span>Example App</span>
             </h3>
         );
     }

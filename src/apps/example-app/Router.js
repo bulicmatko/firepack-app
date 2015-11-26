@@ -16,9 +16,9 @@ import ErrorComponent from './components/Error';
 /**
  *  Router
  */
-const Router = ({basePath = 'todo-app', onEnter = _.noop}) => {
+const Router = ({basePath = 'example-app', onEnter = _.noop}) => {
     return (
-        <Route path={basePath} onEnter={onEnter} component={Layout}>
+        <Route path={basePath} component={Layout}>
             <IndexRoute onEnter={onEnter} component={DashboardComponent}/>
 
             <Route path="dashboard" onEnter={onEnter} component={DashboardComponent}/>
