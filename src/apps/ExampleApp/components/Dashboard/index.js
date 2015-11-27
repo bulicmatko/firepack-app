@@ -1,14 +1,14 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Dashboard
+    Component - Dashboard
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React, { Component } from 'react';
 
 /**
- *  Dashboard
+ *  Define Dashboard Component
  */
 class Dashboard extends Component {
 
@@ -23,5 +23,5 @@ class Dashboard extends Component {
 
 }
 
-// Export Dashboard
+// Export Dashboard Component
 export default Dashboard;

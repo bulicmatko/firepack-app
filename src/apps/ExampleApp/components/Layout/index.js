@@ -1,7 +1,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Layout
+    Component - Layout
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 /**
- *  Layout
+ *  Define Layout Component
  */
 class Layout extends Component {
 
@@ -47,5 +47,5 @@ class Layout extends Component {
 
 }
 
-// Export Layout
+// Export Layout Component
 export default Layout;

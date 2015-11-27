@@ -1,14 +1,14 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Error 404
+    Component - Error 404
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React, { Component } from 'react';
 
 /**
- *  Error 404
+ *  Define Error 404 Component
  */
 class Error404 extends Component {
 
@@ -23,5 +23,5 @@ class Error404 extends Component {
 
 }
 
-// Export Error 404
+// Export Error 404 Component
 export default Error404;

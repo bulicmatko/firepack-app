@@ -1,7 +1,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Router
+    Example App - Main File
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -14,9 +14,9 @@ import Dashboard from './components/Dashboard';
 import Error404 from './components/Error404';
 
 /**
- *  Router
+ *  App Route Constructor
  */
-const Router = ({basePath = 'example-app', onEnter = _.noop}) => {
+export default ({basePath = 'example-app', onEnter = _.noop}) => {
     return (
         <Route path={basePath} component={Layout}>
             <IndexRoute onEnter={onEnter} component={Dashboard}/>
@@ -27,6 +27,3 @@ const Router = ({basePath = 'example-app', onEnter = _.noop}) => {
         </Route>
     );
 };
-
-// Export Router
-export default Router;
