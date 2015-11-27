@@ -1,21 +1,21 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Error
+    Error 404
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React, { Component } from 'react';
 
 /**
- *  Error
+ *  Error 404
  */
-class Error extends Component {
+class Error404 extends Component {
 
     render () {
         return (
             <div>
-                <h1>Error</h1>
+                <h1>Error 404</h1>
                 <p>Whoops...</p>
             </div>
         );
@@ -23,5 +23,5 @@ class Error extends Component {
 
 }
 
-// Export Error
-export default Error;
+// Export Error 404
+export default Error404;

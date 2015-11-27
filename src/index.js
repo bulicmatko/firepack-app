@@ -9,16 +9,30 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Firepack from 'firepack';
 
-import Config from './Config';
+import ExampleApp from './apps/ExampleApp';
 
-import ExampleAppRouter from './apps/example-app/Router';
+const Config = {
+    appPath: '/',
+    firebaseUrl: 'https://fifa-tracker.firebaseio.com',
+    sidebarMenu: {
+        title: 'Example Apps',
+        links: [
+            {
+                _id: 'example-app',
+                icon: 'rocket',
+                title: 'Example App',
+                route: '/apps/example-app'
+            }
+        ]
+    }
+};
 
 /**
  *  Render App
  */
 ReactDOM.render(
     <Firepack {...Config}>
-        {ExampleAppRouter({basePath: 'example-app'})}
+        {ExampleApp({basePath: 'example-app'})}
     </Firepack>,
     document.getElementById('App')
 );

@@ -9,9 +9,9 @@ import _ from 'lodash';
 import React from 'react';
 import { Route, IndexRoute } from 'react-router';
 
-import Layout from './Layout';
-import DashboardComponent from './components/Dashboard';
-import ErrorComponent from './components/Error';
+import Layout from './components/Layout';
+import Dashboard from './components/Dashboard';
+import Error404 from './components/Error404';
 
 /**
  *  Router
@@ -19,11 +19,11 @@ import ErrorComponent from './components/Error';
 const Router = ({basePath = 'example-app', onEnter = _.noop}) => {
     return (
         <Route path={basePath} component={Layout}>
-            <IndexRoute onEnter={onEnter} component={DashboardComponent}/>
+            <IndexRoute onEnter={onEnter} component={Dashboard}/>
 
-            <Route path="dashboard" onEnter={onEnter} component={DashboardComponent}/>
+            <Route path="dashboard" onEnter={onEnter} component={Dashboard}/>
 
-            <Route path="*" onEnter={onEnter} component={ErrorComponent}/>
+            <Route path="*" onEnter={onEnter} component={Error404}/>
         </Route>
     );
 };
