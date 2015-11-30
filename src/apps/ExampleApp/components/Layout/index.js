@@ -9,7 +9,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 
 /**
- *  Define Layout Component
+ *  Layout Component
  */
 class Layout extends Component {
 

@@ -1,16 +1,16 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Firepack App - Configuration
+    Firepack App - Config
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 /**
- *  Configuration
+ *  Config
  */
 export default {
 
-    appPath: '/',
+    appBasePath: '/',
 
     firebaseUrl: 'https://fifa-tracker.firebaseio.com',
 

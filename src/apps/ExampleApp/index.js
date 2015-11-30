@@ -1,7 +1,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Example App - Main File
+    Example App - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -14,7 +14,7 @@ import Dashboard from './components/Dashboard';
 import Error404 from './components/Error404';
 
 /**
- *  App Route Constructor
+ *  Route Constructor
  */
 export default ({basePath = 'example-app', onEnter = _.noop}) => {
     return (
