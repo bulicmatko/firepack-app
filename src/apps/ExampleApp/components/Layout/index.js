@@ -7,6 +7,7 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router';
+import { SidebarMenu } from 'firepack';
 
 /**
  *  Layout Component
@@ -24,10 +25,24 @@ class Layout extends Component {
 
     _renderSidebarMenu () {
         return (
-            <ul>
-                <li><Link to="/apps/example-app/dashboard">Dashboard</Link></li>
-                <li><Link to="/apps/example-app/error-example">Error Example</Link></li>
-            </ul>
+            <SidebarMenu menu={
+                [
+                    {
+                        title: 'Menu',
+                        links: [
+                            {
+                                icon: 'tachometer',
+                                title: 'Dashboard',
+                                route: '/apps/example-app/dashboard'
+                            }, {
+                                icon: 'exclamation-triangle',
+                                title: 'Error 404',
+                                route: '/apps/example-app/error-404'
+                            }
+                        ]
+                    }
+                ]
+            }/>
         );
     }
 
