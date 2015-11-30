@@ -1,6 +1,13 @@
 # Firepack App
 > [Firepack](https://github.com/bulicmatko/firepack/) application template.
 
+[![NPM Status](https://img.shields.io/npm/v/firepack-app.svg?style=flat-square)](https://www.npmjs.com/package/firepack-app)
+[![NPM Status](https://img.shields.io/david/strongloop/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
+[![NPM Status](https://img.shields.io/david/dev/strongloop/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
+[![NPM Status](https://img.shields.io/npm/dm/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
+[![NPM Status](https://img.shields.io/npm/dt/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
+[![NPM Status](https://img.shields.io/npm/l/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
+
 ### DISCLAIMER
 **Firepack App** is in its **early phase of development** and can be a **subject of breaking changes** in near future.
 
