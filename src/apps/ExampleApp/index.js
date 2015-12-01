@@ -13,10 +13,14 @@ import Layout from './components/Layout';
 import Dashboard from './components/Dashboard';
 import Error404 from './components/Error404';
 
+import config from './config';
+
+const { appBasePath } = config;
+
 /**
  *  Route Constructor
  */
-export default ({basePath = 'example-app', onEnter = _.noop}) => {
+export default ({basePath = appBasePath, onEnter = _.noop}) => {
     return (
         <Route path={basePath} component={Layout}>
             <IndexRoute onEnter={onEnter} component={Dashboard}/>

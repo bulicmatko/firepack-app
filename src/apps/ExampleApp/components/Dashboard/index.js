@@ -1,27 +1,32 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Component - Dashboard
+    Dashboard - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React, { Component } from 'react';
 
 /**
- *  Define Dashboard Component
+ *  Dashboard
  */
 class Dashboard extends Component {
 
     render () {
         return (
             <div>
-                <h1>Dashboard</h1>
-                <p>Welcome to Dashboard.</p>
+                <h1>
+                    <i className="fa fa-fw fa-tachometer"></i>
+                    <span>Dashboard</span>
+                </h1>
+                <p>
+                    Welcome to Dashboard.
+                </p>
             </div>
         );
     }
 
 }
 
-// Export Dashboard Component
+// Export Dashboard
 export default Dashboard;
