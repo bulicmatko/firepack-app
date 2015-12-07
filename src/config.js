@@ -25,6 +25,16 @@ export default {
                     route: '/apps/example-app'
                 }
             ]
+        }, {
+            title: 'Other',
+            links: [
+                {
+                    _id: 'other-app',
+                    icon: 'flash',
+                    title: 'Other App',
+                    route: '/apps/other-app'
+                }
+            ]
         }
     ]
 

@@ -15,13 +15,17 @@ class Dashboard extends Component {
     render () {
         return (
             <div>
-                <h1>
-                    <i className="fa fa-fw fa-tachometer"></i>
-                    <span>Dashboard</span>
-                </h1>
-                <p>
-                    Welcome to Dashboard.
-                </p>
+                <div className="App--Topbar">
+                    <h1 className="title">
+                        <i className="fa fa-fw fa-tachometer"></i>
+                        <span>Dashboard</span>
+                    </h1>
+                </div>
+                <div className="App--Content">
+                    <p>
+                        Welcome to Dashboard.
+                    </p>
+                </div>
             </div>
         );
     }
