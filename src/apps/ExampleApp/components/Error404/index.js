@@ -11,6 +11,7 @@ import React, { Component } from 'react';
  *  Error 404
  */
 class Error404 extends Component {
+    static displayName = 'Error404';
 
     render () {
         return (
@@ -29,7 +30,6 @@ class Error404 extends Component {
             </div>
         );
     }
-
 }
 
 // Export Error 404

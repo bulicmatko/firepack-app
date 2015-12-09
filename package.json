@@ -4,6 +4,7 @@
   "description": "Firepack application template.",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint ./src",
     "start": "watchify ./src/index.js -t [ babelify --presets [ es2015 stage-0 react ] ] -t [ scssify ] -o ./_public/assets/scripts/app.js -v",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

@@ -11,6 +11,7 @@ import React, { Component } from 'react';
  *  Dashboard
  */
 class Dashboard extends Component {
+    static displayName = 'Dashboard';
 
     render () {
         return (
@@ -29,7 +30,6 @@ class Dashboard extends Component {
             </div>
         );
     }
-
 }
 
 // Export Dashboard

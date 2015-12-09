@@ -6,13 +6,13 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React, { Component } from 'react';
-import { Link } from 'react-router';
 import { AppWrap, AppSidebar, AppMain } from 'firepack';
 
 /**
  *  Layout
  */
 class Layout extends Component {
+    static displayName = 'Layout';
 
     render () {
         const sidebarConfig = {
@@ -45,7 +45,6 @@ class Layout extends Component {
             </AppWrap>
         );
     }
-
 }
 
 // Export Layout
