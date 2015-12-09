@@ -5,7 +5,7 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { AppWrap, AppSidebar, AppMain } from 'firepack';
 
 /**
@@ -13,6 +13,10 @@ import { AppWrap, AppSidebar, AppMain } from 'firepack';
  */
 class Layout extends Component {
     static displayName = 'Layout';
+
+    static propTypes = {
+        children: PropTypes.element
+    };
 
     render () {
         const sidebarConfig = {

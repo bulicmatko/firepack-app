@@ -20,7 +20,7 @@ const { appBasePath } = config;
 /**
  *  Route Constructor
  */
-export default ({basePath = appBasePath, onEnter = _.noop}) => {
+export default ({ basePath = appBasePath, onEnter = _.noop }) => {
     return (
         <Route path={basePath} component={Layout}>
             <IndexRoute onEnter={onEnter} component={Dashboard}/>

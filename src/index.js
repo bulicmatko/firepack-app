@@ -18,7 +18,7 @@ import config from './config';
  */
 ReactDOM.render(
     <Firepack {...config}>
-        {ExampleApp({basePath: 'example-app'})}
+        {ExampleApp({ basePath: 'example-app' })}
     </Firepack>,
     document.getElementById('App')
 );
