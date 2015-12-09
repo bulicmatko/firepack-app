@@ -1,7 +1,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    Component - Layout
+    Layout - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -10,7 +10,7 @@ import { Link } from 'react-router';
 import { AppWrap, AppSidebar, AppMain } from 'firepack';
 
 /**
- *  Layout Component
+ *  Layout
  */
 class Layout extends Component {
 
@@ -48,5 +48,5 @@ class Layout extends Component {
 
 }
 
-// Export Layout Component
+// Export Layout
 export default Layout;
