@@ -2,19 +2,11 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  App
+  User Selector - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-import React from 'react';
-import { render } from 'react-dom';
-
-import App from './App';
-
 /**
- *  Render App
+ *  User Selectors
  */
-render(
-  <App />,
-  document.getElementById('App')
-);
+export default state => state.user;

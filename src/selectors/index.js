@@ -2,19 +2,18 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  App
+  Selectors - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-import React from 'react';
-import { render } from 'react-dom';
+import { createSelector } from 'reselect';
 
-import App from './App';
+import userSelector from './user';
 
 /**
- *  Render App
+ *  Get User
  */
-render(
-  <App />,
-  document.getElementById('App')
+export const getUser = createSelector(
+  userSelector,
+  user => ({ user })
 );

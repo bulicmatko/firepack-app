@@ -1,3 +1,10 @@
+.vscode
 .DS_Store
-node_modules
-_public/assets/scripts/*
+
+node_modules/
+npm-debug.log
+
+public/static/
+public/coverage/
+
+firebase-debug.log
