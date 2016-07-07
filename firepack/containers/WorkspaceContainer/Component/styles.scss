@@ -31,6 +31,20 @@ $sidebar-width: rem(220);
   width: $sidebar-width;
 
   background-color: color('blue-grey', '900');
+
+  > .title {
+    font-size: rem(25); line-height: rem(40);
+    color: color('blue-grey', '400');
+
+    margin: 0; padding: rem(12) rem(20) rem(8);
+    box-sizing: border-box;
+
+    border-bottom: rem(1) solid color('blue-grey', '800');
+
+    > span {
+      margin-left: rem(10);
+    }
+  }
 }
 
 .WorkspaceContainer--Content {

@@ -8,7 +8,8 @@
 
 import React, { Component, PropTypes, cloneElement } from 'react';
 import cssModules from 'react-css-modules';
-import { Link } from 'react-router';
+
+import Menu from '../../../components/shared/Menu';
 
 import styles from './styles';
 
@@ -29,26 +30,36 @@ export default class extends Component {
     children: null,
   };
 
+  static contextTypes = {
+    menu: PropTypes.array,
+  };
+
   render() {
     const { children } = this.props;
+    const { menu } = this.context;
+
+    const menuConfig = [
+      {
+        title: 'Menu',
+        links: [
+          {
+            icon: 'tachometer',
+            title: 'Dashboard',
+            route: '/dashboard',
+          },
+        ],
+      },
+      ...menu,
+    ];
 
     return (
       <div styleName="WorkspaceContainer">
         <div styleName="WorkspaceContainer--Sidebar">
-          <ul>
-            <li>
-              <Link to="/">Root</Link>
-            </li>
-            <li>
-              <Link to="/auth">Auth</Link>
-            </li>
-            <li>
-              <Link to="/dashboard">Dashboard</Link>
-            </li>
-            <li>
-              <Link to="/app">App</Link>
-            </li>
-          </ul>
+          <h2 styleName="title">
+            <i className="fa fa-fw fa-cube" />
+            <span>Firepack</span>
+          </h2>
+          <Menu menu={menuConfig} />
         </div>
         <div styleName="WorkspaceContainer--Content">
           {cloneElement(children, { key: location.pathname })}

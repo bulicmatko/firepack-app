@@ -24,12 +24,24 @@ export default class extends Component {
   static displayName = 'Firepack';
 
   static propTypes = {
+    menu: PropTypes.array.isRequired,
     routes: PropTypes.array.isRequired,
   };
 
   static defaultProps = {
+    menu: [],
     routes: [],
   };
+
+  static childContextTypes = {
+    menu: PropTypes.array,
+  };
+
+  getChildContext() {
+    return {
+      menu: this.props.menu,
+    };
+  }
 
   render() {
     const { routes } = this.props;

@@ -6,4 +6,4 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-export { default as AuthContainer } from './Component';
+export { default } from './Component';
