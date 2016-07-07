@@ -8,7 +8,16 @@
 
 import { createSelector } from 'reselect';
 
+import appSelector from './app';
 import userSelector from './user';
+
+/**
+ *  Get User
+ */
+export const getApp = createSelector(
+  appSelector,
+  app => ({ app })
+);
 
 /**
  *  Get User
