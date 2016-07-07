@@ -6,4 +6,4 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-export { default as WorkspaceContainer } from './Component';
+export { default } from './Component';

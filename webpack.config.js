@@ -60,7 +60,10 @@ module.exports = {
         loaders: [
           'babel',
         ],
-        include: path.resolve(__dirname, './src'),
+        include: [
+          path.resolve(__dirname, './firepack'),
+          path.resolve(__dirname, './src'),
+        ],
       }, {
         test: /\.scss$/,
         loaders: [
@@ -69,7 +72,10 @@ module.exports = {
           'resolve-url',
           'sass?outputStyle=expanded&sourceMap',
         ],
-        include: path.resolve(__dirname, './src'),
+        include: [
+          path.resolve(__dirname, './firepack'),
+          path.resolve(__dirname, './src'),
+        ],
       },
     ],
   },

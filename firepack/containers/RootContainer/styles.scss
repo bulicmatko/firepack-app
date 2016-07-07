@@ -5,6 +5,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
+//  Imports
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import '../../styles/lib/main';
+
+
 //  Styles
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -12,10 +18,6 @@
   position: relative;
 }
 
-.RootContainer--Topbar {
-  border-bottom: 1px solid black;
-}
-
 .RootContainer--Content {
-  padding: 30px;
+  position: relative;
 }

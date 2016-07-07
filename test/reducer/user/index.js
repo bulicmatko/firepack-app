@@ -8,9 +8,9 @@
 
 import { expect } from 'chai';
 
-import { APP, AUTH } from '../../../src/constants/actionTypes.const';
+import { APP, AUTH } from '../../../firepack/constants/actionTypes.const';
 
-import userReducer from '../../../src/reducer/user';
+import userReducer from '../../../firepack/reducer/user';
 
 /**
  *  User Reducer - Test

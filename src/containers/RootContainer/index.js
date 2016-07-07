@@ -1,13 +1,47 @@
-/* eslint-env node */
+/* eslint-env browser */
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  Root Container - Index
+  Root Container
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-if (__DEVELOPMENT__) { // eslint-disable-line
-  module.exports = require('./RootContainer.dev'); // eslint-disable-line
-} else {
-  module.exports = require('./RootContainer.prod'); // eslint-disable-line
+import React, { Component, PropTypes, cloneElement } from 'react';
+import cssModules from 'react-css-modules';
+
+import Menu from '../../components/shared/Menu';
+
+import styles from './styles';
+
+const { location } = window;
+
+/**
+ *  Root Container
+ */
+@cssModules(styles)
+export default class extends Component {
+  static displayName = 'RootContainer';
+
+  static propTypes = {
+    children: PropTypes.node.isRequired,
+  };
+
+  static defaultProps = {
+    children: null,
+  };
+
+  render() {
+    const { children } = this.props;
+
+    return (
+      <div styleName="RootContainer">
+        <div styleName="RootContainer--Topbar">
+          <Menu />
+        </div>
+        <div styleName="RootContainer--Content">
+          {cloneElement(children, { key: location.pathname })}
+        </div>
+      </div>
+    );
+  }
 }

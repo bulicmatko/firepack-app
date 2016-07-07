@@ -8,6 +8,7 @@
 
 import React, { Component, PropTypes, cloneElement } from 'react';
 import cssModules from 'react-css-modules';
+import { Link } from 'react-router';
 
 import styles from './styles';
 
@@ -33,6 +34,22 @@ export default class extends Component {
 
     return (
       <div styleName="WorkspaceContainer">
+        <div styleName="WorkspaceContainer--Sidebar">
+          <ul>
+            <li>
+              <Link to="/">Root</Link>
+            </li>
+            <li>
+              <Link to="/auth">Auth</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+            <li>
+              <Link to="/app">App</Link>
+            </li>
+          </ul>
+        </div>
         <div styleName="WorkspaceContainer--Content">
           {cloneElement(children, { key: location.pathname })}
         </div>

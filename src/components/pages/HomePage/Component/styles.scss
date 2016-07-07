@@ -1,21 +1,17 @@
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//  Root Container
+//  Home Page
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 //  Styles
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.RootContainer {
+.HomePage {
   position: relative;
 }
 
-.RootContainer--Topbar {
-  border-bottom: 1px solid black;
-}
-
-.RootContainer--Content {
-  padding: 30px;
+.HomePage--Content {
+  position: relative;
 }

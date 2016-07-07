@@ -1,21 +1,24 @@
 
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//  Root Container
+//  Menu
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 //  Styles
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-.RootContainer {
+.Menu {
   position: relative;
 }
 
-.RootContainer--Topbar {
-  border-bottom: 1px solid black;
-}
+.Menu--Content {
+  > li {
+    display: inline-block;
 
-.RootContainer--Content {
-  padding: 30px;
+    > a {
+      display: block;
+      padding: 10px;
+    }
+  }
 }

@@ -8,7 +8,7 @@
 
 import { expect } from 'chai';
 
-import createActionTypes from '../../src/utils/createActionTypes.util';
+import createActionTypes from '../../firepack/utils/createActionTypes.util';
 
 /**
  *  Create Action Types Util - Test

@@ -2,19 +2,18 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  App - Index
+  Page 2 - Index
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-import React from 'react';
-import { render } from 'react-dom';
+import { connect } from 'react-redux';
 
-import App from './App';
+import Component from './Component';
 
 /**
- *  Render App
+ *  Connector
  */
-render(
-  <App />,
-  document.getElementById('App')
-);
+export default connect(
+  state => state,
+  dispatch => ({ dispatch })
+)(Component);

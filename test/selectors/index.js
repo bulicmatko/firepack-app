@@ -8,7 +8,7 @@
 
 import { expect } from 'chai';
 
-import { getUser } from '../../src/selectors';
+import { getUser } from '../../firepack/selectors';
 
 /**
  *  Index Selector - Test

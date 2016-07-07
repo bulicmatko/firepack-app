@@ -7,20 +7,14 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React from 'react';
-import { Provider } from 'react-redux';
-import { Router, browserHistory } from 'react-router';
-import { syncHistoryWithStore } from 'react-router-redux';
 
-import store from './store';
+import Firepack from '../firepack';
+
 import routes from './routes';
-
-import './styles/global';
 
 /**
  *  App
  */
 export default () => (
-  <Provider store={store}>
-    <Router history={syncHistoryWithStore(browserHistory, store)} routes={routes} />
-  </Provider>
+  <Firepack routes={routes} />
 );
