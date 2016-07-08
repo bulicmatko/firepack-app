@@ -93,7 +93,7 @@ class RootContainer extends Component {
         <div styleName="RootContainer--Content">
           {
             user.isAuthenticating
-            ? <span>Please wait...</span>
+            ? <div styleName="loading-screen">Please wait...</div>
             : cloneElement(children, { key: location.pathname })
           }
         </div>

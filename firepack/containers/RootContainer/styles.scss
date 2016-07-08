@@ -20,4 +20,10 @@
 
 .RootContainer--Content {
   position: relative;
+
+  > .loading-screen {
+    color: color('grey', '600'); text-align: center;
+
+    padding: rem(80) 0;
+  }
 }
