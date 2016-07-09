@@ -22,7 +22,7 @@ export default class extends Component {
   static propTypes = {
     app: PropTypes.shape({
       isReady: PropTypes.bool.isRequired,
-    }).isReaquired,
+    }).isRequired,
     onSignInWithFacebook: PropTypes.func.isRequired,
     onSignInWithTwitter: PropTypes.func.isRequired,
     onSignInWithGoogle: PropTypes.func.isRequired,

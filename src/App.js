@@ -12,6 +12,8 @@ import Firepack from '../firepack';
 
 import routes from './routes';
 
+import firebaseConfig from './firebase/config';
+
 const menu = [
   {
     title: 'Firepack App',
@@ -39,5 +41,9 @@ const menu = [
  *  App
  */
 export default () => (
-  <Firepack menu={menu} routes={routes} />
+  <Firepack
+    firebaseConfig={firebaseConfig}
+    routes={routes}
+    menu={menu}
+  />
 );

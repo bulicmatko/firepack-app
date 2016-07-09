@@ -11,8 +11,10 @@ import cssModules from 'react-css-modules';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import firebase from 'firebase';
+import pick from 'lodash/pick';
 import noop from 'lodash/noop';
 
+import getApp from '../../selectors/app';
 import getUser from '../../selectors/user';
 
 import route from '../../utils/route.util';
@@ -31,30 +33,37 @@ class RootContainer extends Component {
   static displayName = 'RootContainer';
 
   static propTypes = {
-    user: PropTypes.object.isRequired,
     router: PropTypes.object.isRequired,
+    app: PropTypes.shape({
+      isReady: PropTypes.bool.isRequired,
+    }).isRequired,
+    user: PropTypes.shape({
+      isAuthenticating: PropTypes.bool.isRequired,
+      isAuthenticated: PropTypes.bool.isRequired,
+    }).isRequired,
     dispatch: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
   };
 
   static defaultProps = {
-    user: {},
     router: {},
+    app: {},
+    user: {},
     dispatch: noop,
     children: null,
   };
 
+  static contextTypes = {
+    firebaseConfig: PropTypes.object.isRequired,
+  };
+
   componentWillMount() {
     const { router, dispatch } = this.props;
+    const { firebaseConfig } = this.context;
 
     dispatch({ type: APP.SETUP });
 
-    firebase.initializeApp({
-      apiKey: 'AIzaSyAl-Gv0I61NRmKa5hVH69-IsZSwfG6WQrA',
-      authDomain: 'firepack-app.firebaseapp.com',
-      databaseURL: 'https://firepack-app.firebaseio.com',
-      storageBucket: 'firepack-app.appspot.com',
-    });
+    firebase.initializeApp(firebaseConfig);
 
     firebase
       .auth()
@@ -86,13 +95,13 @@ class RootContainer extends Component {
   }
 
   render() {
-    const { user, children } = this.props;
+    const { app, user, children } = this.props;
 
     return (
       <div styleName="RootContainer">
         <div styleName="RootContainer--Content">
           {
-            user.isAuthenticating
+            !app.isReady || user.isAuthenticating
             ? <div styleName="loading-screen">Please wait...</div>
             : cloneElement(children, { key: location.pathname })
           }
@@ -106,7 +115,11 @@ class RootContainer extends Component {
  *  Connector
  */
 export default connect(
-  state => ({ user: getUser(state) }),
+  state => ({
+    app: pick(getApp(state), 'isReady'),
+    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticated'),
+
+  }),
   dispatch => ({
     dispatch: action => dispatch(action),
   })

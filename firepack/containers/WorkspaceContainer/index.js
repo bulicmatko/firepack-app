@@ -21,6 +21,6 @@ import getUser from '../../selectors/user';
 export default connect(
   state => ({
     app: pick(getApp(state), 'isReady'),
-    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticatied'),
+    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticated'),
   })
 )(withRouter(Component));

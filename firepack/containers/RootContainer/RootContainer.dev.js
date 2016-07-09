@@ -55,17 +55,17 @@ class RootContainer extends Component {
     children: null,
   };
 
+  static contextTypes = {
+    firebaseConfig: PropTypes.object.isRequired,
+  };
+
   componentWillMount() {
     const { router, dispatch } = this.props;
+    const { firebaseConfig } = this.context;
 
     dispatch({ type: APP.SETUP });
 
-    firebase.initializeApp({
-      apiKey: 'AIzaSyAl-Gv0I61NRmKa5hVH69-IsZSwfG6WQrA',
-      authDomain: 'firepack-app.firebaseapp.com',
-      databaseURL: 'https://firepack-app.firebaseio.com',
-      storageBucket: 'firepack-app.appspot.com',
-    });
+    firebase.initializeApp(firebaseConfig);
 
     firebase
       .auth()
@@ -120,7 +120,7 @@ class RootContainer extends Component {
 export default connect(
   state => ({
     app: pick(getApp(state), 'isReady'),
-    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticatied'),
+    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticated'),
 
   }),
   dispatch => ({
