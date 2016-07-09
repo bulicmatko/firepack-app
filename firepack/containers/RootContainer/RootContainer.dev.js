@@ -15,6 +15,7 @@ import noop from 'lodash/noop';
 
 import DevTools from '../../components/dev/DevTools';
 
+import getApp from '../../selectors/app';
 import getUser from '../../selectors/user';
 
 import route from '../../utils/route.util';
@@ -33,15 +34,23 @@ class RootContainer extends Component {
   static displayName = 'RootContainer';
 
   static propTypes = {
-    user: PropTypes.object.isRequired,
     router: PropTypes.object.isRequired,
+    app: PropTypes.shape({
+      isReady: PropTypes.bool.isRequired,
+    }).isRequired,
+    user: PropTypes.shape({
+      isAuthenticating: PropTypes.bool.isRequired,
+      isAuthenticated: PropTypes.bool.isRequired,
+      data: PropTypes.object.isRequired,
+    }).isRequired,
     dispatch: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
   };
 
   static defaultProps = {
-    user: {},
     router: {},
+    app: {},
+    user: {},
     dispatch: noop,
     children: null,
   };
@@ -88,13 +97,13 @@ class RootContainer extends Component {
   }
 
   render() {
-    const { user, children } = this.props;
+    const { app, user, children } = this.props;
 
     return (
       <div styleName="RootContainer">
         <div styleName="RootContainer--Content">
           {
-            user.isAuthenticating
+            !app.isReady || user.isAuthenticating
             ? <div styleName="loading-screen">Please wait...</div>
             : cloneElement(children, { key: location.pathname })
           }
@@ -109,7 +118,10 @@ class RootContainer extends Component {
  *  Connector
  */
 export default connect(
-  state => ({ user: getUser(state) }),
+  state => ({
+    app: getApp(state),
+    user: getUser(state),
+  }),
   dispatch => ({
     dispatch: action => dispatch(action),
   })

@@ -11,6 +11,8 @@ import cssModules from 'react-css-modules';
 
 import Menu from '../../../components/shared/Menu';
 
+import route from '../../../utils/route.util';
+
 import styles from './styles';
 
 const { location } = window;
@@ -23,16 +25,36 @@ export default class extends Component {
   static displayName = 'WorkspaceContainer';
 
   static propTypes = {
+    router: PropTypes.object.isRequired,
+    app: PropTypes.shape({
+      isReady: PropTypes.bool.isRequired,
+    }).isRequired,
+    user: PropTypes.shape({
+      isAuthenticating: PropTypes.bool.isRequired,
+      isAuthenticated: PropTypes.bool.isRequired,
+      data: PropTypes.object.isRequired,
+    }).isRequired,
     children: PropTypes.node.isRequired,
   };
 
   static defaultProps = {
+    router: {},
+    app: {},
+    user: {},
     children: null,
   };
 
   static contextTypes = {
     menu: PropTypes.array,
   };
+
+  componentWillMount() {
+    const { router, app, user } = this.props;
+
+    if (app.isReady && !user.isAuthenticating && !user.isAuthenticated) {
+      router.replace({ pathname: route('auth') });
+    }
+  }
 
   render() {
     const { children } = this.props;
@@ -42,6 +64,16 @@ export default class extends Component {
       {
         title: 'Menu',
         links: [
+          {
+            icon: 'user',
+            title: 'Auth',
+            route: '/auth',
+          },
+          {
+            icon: 'home',
+            title: 'Root',
+            route: '/',
+          },
           {
             icon: 'tachometer',
             title: 'Dashboard',

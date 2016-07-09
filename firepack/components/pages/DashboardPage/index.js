@@ -8,7 +8,7 @@
 
 import { connect } from 'react-redux';
 
-import DashboardPage from './Component';
+import Component from './Component';
 
 import getUser from '../../../selectors/user';
 
@@ -22,4 +22,4 @@ export default connect(
   dispatch => ({
     onSignOut: () => dispatch(signOut()),
   })
-)(DashboardPage);
+)(Component);

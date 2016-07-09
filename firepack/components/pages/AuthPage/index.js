@@ -8,7 +8,7 @@
 
 import { connect } from 'react-redux';
 
-import AuthPage from './Component';
+import Component from './Component';
 
 import signInWithPopup from '../../../actions/auth/signInWithPopup.action';
 
@@ -23,4 +23,4 @@ export default connect(
     onSignInWithGoogle: () => dispatch(signInWithPopup('Google')),
     onSignInWithGithub: () => dispatch(signInWithPopup('Github')),
   })
-)(AuthPage);
+)(Component);
