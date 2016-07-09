@@ -2,7 +2,7 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-  User Selector - Test
+  App Selector - Test
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
@@ -10,23 +10,22 @@ import chai, { expect } from 'chai';
 import chaiImmutable from 'chai-immutable';
 import { fromJS } from 'immutable';
 
-import userSelector from '../../../firepack/selectors/user';
+import appSelector from '../../../firepack/selectors/app';
 
 chai.use(chaiImmutable);
 
 /**
- *  User Selector - Test
+ *  App Selector - Test
  */
-describe('User Selector', () => {
-  it('should get user object from state', () => {
+describe('App Selector', () => {
+  it('should get app object from state', () => {
     const state = {
-      user: fromJS({
-        email: 'bulicmatko@gmail.com',
-        displayName: 'Matko Bulic',
+      app: fromJS({
+        isReady: true,
       }),
     };
-    const expectedState = state.user.toJS();
-    const newState = userSelector(state);
+    const expectedState = state.app.toJS();
+    const newState = appSelector(state);
 
     expect(newState).to.deep.equal(expectedState);
   });

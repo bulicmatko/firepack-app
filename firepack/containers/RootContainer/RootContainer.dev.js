@@ -11,6 +11,7 @@ import cssModules from 'react-css-modules';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import firebase from 'firebase';
+import pick from 'lodash/pick';
 import noop from 'lodash/noop';
 
 import DevTools from '../../components/dev/DevTools';
@@ -41,7 +42,6 @@ class RootContainer extends Component {
     user: PropTypes.shape({
       isAuthenticating: PropTypes.bool.isRequired,
       isAuthenticated: PropTypes.bool.isRequired,
-      data: PropTypes.object.isRequired,
     }).isRequired,
     dispatch: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
@@ -119,8 +119,9 @@ class RootContainer extends Component {
  */
 export default connect(
   state => ({
-    app: getApp(state),
-    user: getUser(state),
+    app: pick(getApp(state), 'isReady'),
+    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticatied'),
+
   }),
   dispatch => ({
     dispatch: action => dispatch(action),

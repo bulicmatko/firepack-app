@@ -20,6 +20,9 @@ export default class extends Component {
   static displayName = 'AuthPage';
 
   static propTypes = {
+    app: PropTypes.shape({
+      isReady: PropTypes.bool.isRequired,
+    }).isReaquired,
     onSignInWithFacebook: PropTypes.func.isRequired,
     onSignInWithTwitter: PropTypes.func.isRequired,
     onSignInWithGoogle: PropTypes.func.isRequired,
@@ -27,6 +30,7 @@ export default class extends Component {
   };
 
   static defaultProps = {
+    app: {},
     onSignInWithFacebook: noop,
     onSignInWithTwitter: noop,
     onSignInWithGoogle: noop,

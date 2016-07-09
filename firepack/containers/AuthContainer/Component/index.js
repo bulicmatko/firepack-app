@@ -30,7 +30,6 @@ export default class extends Component {
     user: PropTypes.shape({
       isAuthenticating: PropTypes.bool.isRequired,
       isAuthenticated: PropTypes.bool.isRequired,
-      data: PropTypes.object.isRequired,
     }).isRequired,
     children: PropTypes.node.isRequired,
   };

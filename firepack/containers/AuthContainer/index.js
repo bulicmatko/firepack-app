@@ -8,6 +8,7 @@
 
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
+import pick from 'lodash/pick';
 
 import Component from './Component';
 
@@ -19,7 +20,7 @@ import getUser from '../../selectors/user';
  */
 export default connect(
   state => ({
-    app: getApp(state),
-    user: getUser(state),
+    app: pick(getApp(state), 'isReady'),
+    user: pick(getUser(state), 'isAuthenticating', 'isAuthenticatied'),
   })
 )(withRouter(Component));
