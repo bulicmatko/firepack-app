@@ -6,15 +6,60 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+import { fromJS } from 'immutable';
+
 import { APP, AUTH } from '../../constants/actionTypes.const';
 
 /**
  *  Initial State
  */
-const initState = {
+const initState = fromJS({
   isAuthenticating: false,
   isAuthenticated: false,
   data: {},
+});
+
+/**
+ *  Hash Map
+ */
+const hashMap = {
+  [APP.SETUP]: state => (
+    state.set('isAuthenticating', true)
+  ),
+  [AUTH.SIGN_IN_WITH_POPUP_START]: state => (
+    state.set('isAuthenticating', true)
+  ),
+  [AUTH.SIGN_IN_WITH_POPUP_SUCCESS]: state => (
+    state.set('isAuthenticating', false)
+  ),
+  [AUTH.SIGN_IN_WITH_POPUP_FAIL]: state => (
+    state.set('isAuthenticating', false)
+  ),
+
+  [AUTH.AUTHENTICATED]: (state, payload) => (
+    state.mergeDeep({
+      isAuthenticating: false,
+      isAuthenticated: true,
+      data: payload,
+    })
+  ),
+  [AUTH.UNAUTHENTICATED]: state => (
+    state.mergeDeep({
+      isAuthenticating: false,
+      isAuthenticated: false,
+      data: {},
+    })
+  ),
+
+  [AUTH.SIGN_OUT_START]: state => (
+    state.set('isAuthenticating', true)
+  ),
+  [AUTH.SIGN_OUT_SUCCESS]: state => (
+    state.set('isAuthenticating', false)
+  ),
+  [AUTH.SIGN_OUT_FAIL]: state => (
+    state.set('isAuthenticating', false)
+  ),
 };
 
 /**
@@ -23,30 +68,7 @@ const initState = {
 export default (state = initState, action) => {
   const { type, payload } = action;
 
-  switch (type) {
-    case APP.SETUP:
-      return { ...state, isAuthenticating: true };
-
-    case AUTH.SIGN_IN_WITH_POPUP_START:
-      return { ...state, isAuthenticating: true };
-    case AUTH.SIGN_IN_WITH_POPUP_SUCCESS:
-      return { ...state, isAuthenticating: false };
-    case AUTH.SIGN_IN_WITH_POPUP_FAIL:
-      return { ...state, isAuthenticating: false };
-
-    case AUTH.AUTHENTICATED:
-      return { ...state, isAuthenticating: false, isAuthenticated: true, data: payload };
-    case AUTH.UNAUTHENTICATED:
-      return { ...state, isAuthenticating: false, isAuthenticated: false, data: {} };
-
-    case AUTH.SIGN_OUT_START:
-      return { ...state, isAuthenticating: true };
-    case AUTH.SIGN_OUT_SUCCESS:
-      return { ...state, isAuthenticating: false };
-    case AUTH.SIGN_OUT_FAIL:
-      return { ...state, isAuthenticating: false };
-
-    default:
-      return state;
-  }
+  return hashMap[type]
+    ? hashMap[type](state, payload)
+    : state;
 };

@@ -37,7 +37,7 @@ export default class extends Component {
     onSignOut: noop,
   };
 
-  handleSignOut = (e) => {
+  handleSignOut = e => {
     e.preventDefault();
     this.props.onSignOut();
   };

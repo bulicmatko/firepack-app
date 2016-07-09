@@ -9,4 +9,4 @@
 /**
  *  User Selectors
  */
-export default state => state.user;
+export default state => state.user.toJS();

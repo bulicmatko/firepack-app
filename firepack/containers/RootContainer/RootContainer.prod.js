@@ -13,6 +13,8 @@ import { connect } from 'react-redux';
 import firebase from 'firebase';
 import noop from 'lodash/noop';
 
+import getUser from '../../selectors/user';
+
 import route from '../../utils/route.util';
 
 import styles from './styles';
@@ -91,7 +93,7 @@ class RootContainer extends Component {
         <div styleName="RootContainer--Content">
           {
             user.isAuthenticating
-            ? <span>Please wait...</span>
+            ? <div styleName="loading-screen">Please wait...</div>
             : cloneElement(children, { key: location.pathname })
           }
         </div>
@@ -104,7 +106,7 @@ class RootContainer extends Component {
  *  Connector
  */
 export default connect(
-  state => state,
+  state => ({ user: getUser(state) }),
   dispatch => ({
     dispatch: action => dispatch(action),
   })
