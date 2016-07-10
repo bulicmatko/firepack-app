@@ -12,7 +12,7 @@
     "deploy": "npm run check && npm run build && firebase deploy",
     "flow": "flow",
     "lint": "eslint ./firepack ./src",
-    "report-coverage": "cat ./public/coverage/lcov.info | codecov",
+    "report-coverage": "cat ./public/coverage/lcov.info | ./node_modules/.bin/codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "server": "firebase serve",
     "start": "webpack-dev-server --inline --hot --progress --colors --port=8888",
