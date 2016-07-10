@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "NODE_ENV=production webpack --optimize-minimize --progress --colors",
-    "check": "npm run lint && npm run flow && npm run test && npm run check-coverage",
+    "check": "npm run lint && npm run flow && npm run test && npm run cover && npm run check-coverage",
     "check-coverage": "nyc check-coverage --statements 80 --branches 80 --functions 80 --lines 80",
     "commit": "git-cz",
     "cover": "nyc npm run test --report-dir=./public/coverage --reporter=html && nyc report --report-dir=./public/coverage",
