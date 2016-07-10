@@ -44,13 +44,14 @@ export default class extends Component {
 
   render() {
     const { user } = this.props;
+    const { data } = user;
 
     return (
       <div styleName="DashboardPage">
         <div styleName="DashboardPage--Content">
-          <img src={user.data.photoURL} alt={user.data.displayName} />
-          <h1>{user.data.displayName}</h1>
-          <p>{user.data.email}</p>
+          <img src={data.photoURL} alt={data.displayName} />
+          <h1>{data.displayName}</h1>
+          <p>{data.email}</p>
           <button onClick={this.handleSignOut}>
             Sign out
           </button>
