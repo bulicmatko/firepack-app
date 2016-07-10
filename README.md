@@ -1,5 +1,5 @@
 # Firepack App
-> [Firepack](https://github.com/bulicmatko/firepack/) application boilerplate.
+> [Firepack](https://github.com/bulicmatko/firepack/) Application Boilerplate
 
 [![Build Status](https://img.shields.io/travis/bulicmatko/firepack-app.svg?style=flat-square)](https://travis-ci.org/bulicmatko/firepack-app)
 [![Code Coverage Status](https://img.shields.io/codecov/c/github/bulicmatko/firepack-app.svg?style=flat-square)](https://codecov.io/github/bulicmatko/firepack-app)
@@ -18,14 +18,6 @@ To see it in action please check the [demo](https://firepack-app.firebaseapp.com
 
 ## Contributing
 If you want to contribute or share your ideas, please feel free to [contact me](mailto:bulicmatko@gmail.com).
-
-## Versioning
-This project adheres to [Semantic Versioning](http://semver.org/).
-
-## Change Log
-All notable changes to this project will be documented in
-[CHANGELOG.md](https://github.com/bulicmatko/firepack-app/blob/master/CHANGELOG.md) file.  
-*Change Log* uses template from '**Keep a change log**' [website](http://keepachangelog.com/).
 
 ## License
 Copyright (c) 2015 [Matko Bulić](mailto:bulicmatko@gmail.com).  
