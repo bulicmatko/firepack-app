@@ -12,7 +12,7 @@
     "deploy": "npm run check && npm run build && firebase deploy",
     "flow": "flow",
     "lint": "eslint ./firepack ./src",
-    "report-coverage": "cat ./public/coverage/lcov.info | ./node_modules/.bin/codecov",
+    "report-coverage": "cat ./public/coverage/lcov.info | codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "server": "firebase serve",
     "start": "webpack-dev-server --inline --hot --progress --colors --port=8888",
@@ -84,6 +84,7 @@
     "redux-devtools-log-monitor": "^1.0.11",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
+    "semantic-release": "^4.3.5",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
