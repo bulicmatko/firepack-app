@@ -8,7 +8,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import cssModules from 'react-css-modules';
-import { Link } from 'react-router';
+import { IndexLink } from 'react-router';
 
 import styles from './styles';
 
@@ -32,13 +32,13 @@ export default class extends Component {
       <div styleName="Menu">
         <ul styleName="Menu--Content">
           <li>
-            <Link to="/app">Home Page</Link>
+            <IndexLink to="/app" activeClassName="isLinkActive">Home Page</IndexLink>
           </li>
           <li>
-            <Link to="/app/page-1">Page 1</Link>
+            <IndexLink to="/app/page-1" activeClassName="isLinkActive">Page 1</IndexLink>
           </li>
           <li>
-            <Link to="/app/page-2">Page 2</Link>
+            <IndexLink to="/app/page-2" activeClassName="isLinkActive">Page 2</IndexLink>
           </li>
         </ul>
       </div>

@@ -16,7 +16,7 @@
 
 :global {
   .isActive {
-    color: color('blue-grey', '200') !important; font-weight: bold;
+    color: color('blue-grey', '100') !important; font-weight: bold;
 
     border-left-color: color('red') !important;
   }
@@ -51,11 +51,11 @@
           border: rem(3) solid transparent; border-radius: rem(2);
 
           &:hover, &:focus {
-            color: color('blue-grey', '600');
+            color: color('blue-grey', '200');
           }
 
           &:active {
-            color: color('blue-grey', '200');
+            color: color('blue-grey', '300');
           }
 
           > span {
