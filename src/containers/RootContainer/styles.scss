@@ -5,6 +5,12 @@
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
+//  Imports
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import '../../../firepack/styles/lib/main';
+
+
 //  Styles
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -13,10 +19,10 @@
 }
 
 .RootContainer--Topbar {
-  height: 60px;
-  border-bottom: 1px solid black;
+  height: rem(60);
+  border-bottom: rem(1) solid color('blue-grey', '200');
 }
 
 .RootContainer--Content {
-  padding: 30px;
+  padding: rem(30);
 }
