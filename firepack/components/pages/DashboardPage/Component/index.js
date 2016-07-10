@@ -21,9 +21,9 @@ export default class extends Component {
 
   static propTypes = {
     user: PropTypes.shape({
-      email: PropTypes.string,
-      photoURL: PropTypes.string,
-      displayName: PropTypes.string,
+      email: PropTypes.string.isRequired,
+      photoURL: PropTypes.string.isRequired,
+      displayName: PropTypes.string.isRequired,
     }).isRequired,
     onSignOut: PropTypes.func.isRequired,
   };
