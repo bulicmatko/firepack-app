@@ -1,10 +1,28 @@
+sudo: false
 language: node_js
+cache:
+  directories:
+    - node_modules
+branches:
+  only:
+    - master
+notifications:
+  email: false
 node_js:
-  - "4.2"
+  - 4.2
 env:
   - CXX=g++-4.8
+before_install:
+  - npm i -g npm@^3.0.0
 install:
   - npm i
+before_script:
+  - npm prune
 script:
-    - npm run check
-    - npm run cover
+  - npm run check
+  - npm run check-coverage
+after_success:
+  - npm run build
+  - npm run deploy
+  - npm run report-coverage
+  - npm run semantic-release

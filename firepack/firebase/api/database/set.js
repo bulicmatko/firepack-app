@@ -2,26 +2,24 @@
 
 /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Push
+  Set
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import firebase from 'firebase';
 
 /**
- *Push */
-export default () => {
-
-  return new Promise((resolve, reject) => {
-
-
-static databaseSet(path, value) {
-  return firebase
-    .database()
-    .ref(path)
-    .set(value);
-}
-
-
-  });
-
-};
+ *  Set
+ */
+export default (path, value) => (
+  new Promise((resolve, reject) => (
+    firebase
+      .database()
+      .ref(path)
+      .set(value, error => (
+        error
+          ? reject(error)
+          : resolve()
+      ))
+  ))
+);

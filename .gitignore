@@ -1,10 +1,11 @@
-.vscode
 .DS_Store
 
-node_modules/
-npm-debug.log
+.vscode
+.nyc_output
 
+npm-debug.log
+firebase-debug.log
+
+node_modules/
 public/static/
 public/coverage/
-
-firebase-debug.log
