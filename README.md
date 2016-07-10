@@ -7,7 +7,7 @@
 [![NPM Status](https://img.shields.io/npm/dm/firepack-app.svg?style=flat-square)](http://npm-stat.com/charts.html?package=firepack-app&from=2016-07-07)
 [![NPM Status](https://img.shields.io/npm/dt/firepack-app.svg?style=flat-square)](https://www.npmjs.org/package/firepack-app)
 [![NPM Status](https://img.shields.io/npm/l/firepack-app.svg?style=flat-square)](https://github.com/bulicmatko/firepack-app/blob/master/LICENSE)
-[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Commitizen Friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=flat-square)](http://commitizen.github.io/cz-cli/)
 [![Semantic Release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
 ### DISCLAIMER

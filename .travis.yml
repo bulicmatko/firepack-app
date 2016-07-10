@@ -8,8 +8,8 @@ notifications:
 node_js:
   - 4.2
 branches:
-  except:
-    - /^v\d+\.\d+\.\d+$/
+  only:
+    - master
 before_install:
   - npm i -g npm@^3.0.0
 before_script:
