@@ -3,20 +3,15 @@ language: node_js
 cache:
   directories:
     - node_modules
-branches:
-  only:
-    - master
 notifications:
   email: false
 node_js:
   - 4.2
-env:
-  - CXX=g++-4.8
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
 before_install:
   - npm i -g npm@^3.0.0
-  - npm i -g codecov
-install:
-  - npm install
 before_script:
   - npm prune
 script:
@@ -24,4 +19,3 @@ script:
   - npm run check-coverage
 after_success:
   - npm run report-coverage
-  - npm run semantic-release

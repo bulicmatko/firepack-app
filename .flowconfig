@@ -1,9 +1,10 @@
 [include]
+./firepack/*.js
 ./src/*.js
 
 [ignore]
-.*/_tests_/.*
 .*/node_modules/.*
+.*/test/.*
 
 [libs]
 

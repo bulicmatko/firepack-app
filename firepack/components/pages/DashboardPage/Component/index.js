@@ -48,9 +48,9 @@ export default class extends Component {
     return (
       <div styleName="DashboardPage">
         <div styleName="DashboardPage--Content">
-          <img src={user.photoURL} alt={user.displayName} />
-          <h1>{user.displayName}</h1>
-          <p>{user.email}</p>
+          <img src={user.data.photoURL} alt={user.data.displayName} />
+          <h1>{user.data.displayName}</h1>
+          <p>{user.data.email}</p>
           <button onClick={this.handleSignOut}>
             Sign out
           </button>
