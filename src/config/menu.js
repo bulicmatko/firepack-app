@@ -25,6 +25,11 @@ export default [
         title: 'Page 2',
         route: '/app/page-2',
       },
+      {
+        icon: 'file',
+        title: 'Page 3',
+        route: '/app/page-3',
+      },
     ],
   },
 ];
