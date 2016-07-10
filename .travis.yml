@@ -22,7 +22,5 @@ script:
   - npm run check
   - npm run check-coverage
 after_success:
-  - npm run build
-  - npm run deploy
   - npm run report-coverage
   - npm run semantic-release
