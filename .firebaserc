@@ -1,4 +1,8 @@
 {
+  // Firebase Configuration File
+  // See https://firebase.google.com/docs/cli/ for more details.
+
+  // Projects
   "projects": {
     "default": "firepack-app"
   }

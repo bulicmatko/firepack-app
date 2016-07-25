@@ -1,11 +1,15 @@
+# Git Ignore Configuration File
+# See https://git-scm.com/docs/gitignore for more details.
+
 .DS_Store
 
 .vscode
 .nyc_output
 
 npm-debug.log
-firebase-debug.log
-
 node_modules/
+
 public/static/
 public/coverage/
+
+firebase-debug.log

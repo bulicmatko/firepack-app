@@ -61,7 +61,7 @@ module.exports = {
           'babel',
         ],
         include: [
-          path.resolve(__dirname, './firepack'),
+          path.resolve(__dirname, './node_modules/firepack'),
           path.resolve(__dirname, './src'),
         ],
       }, {
@@ -73,7 +73,7 @@ module.exports = {
           'sass?outputStyle=expanded&sourceMap',
         ],
         include: [
-          path.resolve(__dirname, './firepack'),
+          path.resolve(__dirname, './node_modules/firepack'),
           path.resolve(__dirname, './src'),
         ],
       },

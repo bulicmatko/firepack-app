@@ -1,0 +1,52 @@
+
+
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+//  Welcome Page
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+//  Imports
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+@import '~firepack/src/styles/lib/main';
+
+
+//  Styles
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+.WelcomePage {
+  position: relative;
+}
+
+.WelcomePage--Content {
+  text-align: center;
+  padding: rem(60) 0;
+
+  > img {
+    width: rem(80); height: rem(80);
+
+    background-color: color('grey', '200');
+    border-radius: percentage(1/8);
+  }
+
+  > h1 {
+    color: color('grey', '800');
+    margin-bottom: rem(10);
+  }
+
+  > p {
+    color: color('grey', '600');
+    margin-bottom: rem(50);
+  }
+
+  > button {
+    font-size: rem(18); line-height: rem(22);
+    color: color('blue-grey', '800');
+
+    display: inline-block;
+    padding: rem(11) rem(30) rem(9); box-sizing: border-box;
+
+    border: rem(1) solid color('blue-grey', '600'); border-radius: rem(2);
+    background-color: color('white', '500');
+  }
+}

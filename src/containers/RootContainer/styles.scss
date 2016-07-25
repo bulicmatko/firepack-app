@@ -8,7 +8,7 @@
 //  Imports
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@import '../../../firepack/styles/lib/main';
+@import '~firepack/src/styles/lib/main';
 
 
 //  Styles
@@ -16,11 +16,6 @@
 
 .RootContainer {
   position: relative;
-}
-
-.RootContainer--Topbar {
-  height: rem(60);
-  border-bottom: rem(1) solid color('blue-grey', '200');
 }
 
 .RootContainer--Content {

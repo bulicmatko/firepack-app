@@ -11,7 +11,7 @@
     "cover": "nyc npm run test --report-dir=./public/coverage --reporter=html --reporter=lcov && nyc report --report-dir=./public/coverage",
     "deploy": "npm run check && npm run build && firebase deploy",
     "flow": "flow",
-    "lint": "eslint ./firepack ./src",
+    "lint": "eslint ./src",
     "report-coverage": "nyc report --report-dir=./public/coverage --reporter=text-lcov > ./public/coverage/coverage.lcov && ./node_modules/.bin/codecov",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "server": "firebase serve",
@@ -92,7 +92,7 @@
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run check"
+      "pre-commit": "npm run lint"
     },
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"

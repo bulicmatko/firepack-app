@@ -7,22 +7,22 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React from 'react';
-
-import Firepack from '../firepack';
+import Firepack from 'firepack';
 
 import routes from './routes';
+import reducer from './reducer';
 
 import firebaseConfig from './firebase/config';
-
-import menu from './config/menu';
+import firebaseAuthProviders from './firebase/authProviders';
 
 /**
  *  App
  */
 export default () => (
   <Firepack
-    firebaseConfig={firebaseConfig}
     routes={routes}
-    menu={menu}
+    reducer={reducer}
+    firebaseConfig={firebaseConfig}
+    firebaseAuthProviders={firebaseAuthProviders}
   />
 );

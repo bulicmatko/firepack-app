@@ -12,6 +12,7 @@ branches:
     - master
 before_install:
   - npm i -g npm@^3.0.0
+  - npm i -g firebase@^3.0.0
 before_script:
   - npm prune
 script:
@@ -20,3 +21,4 @@ script:
 after_success:
   - npm run report-coverage
   - npm run semantic-release
+  - firebase deploy --email ${FIREBASE_USERNAME} --password ${FIREBASE_PASSWORD}
