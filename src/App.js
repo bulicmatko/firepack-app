@@ -22,6 +22,8 @@ import './styles/global';
  */
 export default () => (
   <Firepack
+    appTitle="Firepack App"
+    appDescription="Kickstart your Firepack application"
     routes={routes}
     reducer={reducer}
     firebaseConfig={firebaseConfig}
