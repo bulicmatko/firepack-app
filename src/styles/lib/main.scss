@@ -1,23 +1,13 @@
 
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-//  Root Container
+//  Lib Main
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 
 //  Imports
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@import '../../styles/lib/main';
+@import '~bourbon/app/assets/stylesheets/bourbon';
 
-
-//  Styles
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-.RootContainer {
-  position: relative;
-}
-
-.RootContainer--Content {
-  padding: rem(30);
-}
+@import './breakpoints';
+@import './colors';

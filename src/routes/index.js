@@ -6,7 +6,7 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
-import { createRoutes } from 'firepack';
+import { registerRoutes } from 'firepack';
 
 import RootContainer from '../containers/RootContainer';
 
@@ -18,9 +18,9 @@ import WelcomePage from '../components/pages/WelcomePage';
 const indexPath = '/welcome';
 
 /**
- *  Create Routes
+ *  Register Routes
  */
-export default createRoutes([
+export default registerRoutes([
   {
     path: '/',
     component: RootContainer,

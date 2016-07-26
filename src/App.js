@@ -15,6 +15,8 @@ import reducer from './reducer';
 import firebaseConfig from './firebase/config';
 import firebaseAuthProviders from './firebase/authProviders';
 
+import './styles/global';
+
 /**
  *  App
  */
