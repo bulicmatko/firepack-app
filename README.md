@@ -1,5 +1,5 @@
 # Firepack App
-> [Firepack](https://github.com/bulicmatko/firepack/) Application Boilerplate
+> Kickstart your [Firepack](https://github.com/bulicmatko/firepack/) application
 
 [![Build Status](https://img.shields.io/travis/bulicmatko/firepack-app.svg?style=flat-square)](https://travis-ci.org/bulicmatko/firepack-app)
 [![Code Coverage Status](https://img.shields.io/codecov/c/github/bulicmatko/firepack-app.svg?style=flat-square)](https://codecov.io/github/bulicmatko/firepack-app)
