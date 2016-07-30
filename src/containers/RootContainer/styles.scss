@@ -1,5 +1,4 @@
 
-
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  Root Container
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -8,7 +7,7 @@
 //  Imports
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-@import '../../../firepack/styles/lib/main';
+@import '../../styles/lib/main';
 
 
 //  Styles
@@ -16,11 +15,6 @@
 
 .RootContainer {
   position: relative;
-}
-
-.RootContainer--Topbar {
-  height: rem(60);
-  border-bottom: rem(1) solid color('blue-grey', '200');
 }
 
 .RootContainer--Content {

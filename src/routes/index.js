@@ -6,31 +6,32 @@
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
+import { registerRoutes } from 'firepack';
+
 import RootContainer from '../containers/RootContainer';
 
-import HomePage from '../components/pages/HomePage';
-import Page1 from '../components/pages/Page1';
-import Page2 from '../components/pages/Page2';
+import WelcomePage from '../components/pages/WelcomePage';
 
 /**
- *  Routes
+ *  Index Path
  */
-export default [
+const indexPath = '/welcome';
+
+/**
+ *  Register Routes
+ */
+export default registerRoutes([
   {
-    path: '/app',
+    path: '/',
     component: RootContainer,
     indexRoute: {
-      component: HomePage,
+      component: WelcomePage,
     },
     childRoutes: [
       {
-        path: '/app/page-1',
-        component: Page1,
-      },
-      {
-        path: '/app/page-2',
-        component: Page2,
+        path: '/welcome',
+        component: WelcomePage,
       },
     ],
   },
-];
+], indexPath);

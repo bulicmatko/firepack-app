@@ -1,11 +1,44 @@
-.DS_Store
+# Git Ignore Configuration File
+# See https://git-scm.com/docs/gitignore for more details.
 
-.vscode
-.nyc_output
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Directories
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+public/static/
+public/coverage/
+node_modules/
 
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Files
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 npm-debug.log
 firebase-debug.log
 
-node_modules/
-public/static/
-public/coverage/
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Extensions
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+*.gz
+*.log
+*.rar
+*.tar
+*.zip
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Project generated
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.nyc_output
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# IDE generated
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+.idea/
+.vscode/
+.project
+*.iml
+
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# OS generated
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+__MACOSX/
+.DS_Store
+Thumbs.db
