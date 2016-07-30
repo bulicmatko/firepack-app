@@ -1,35 +1,30 @@
 {
   "name": "firepack-app",
   "version": "0.0.0-semantically-released",
-  "description": "Firepack Application Boilerplate",
-  "main": "./index.js",
+  "description": "Kickstart your Firepack application development",
   "scripts": {
     "build": "NODE_ENV=production webpack --optimize-minimize --progress --colors",
-    "check": "npm run lint && npm run flow && npm run test && npm run cover && npm run check-coverage",
-    "check-coverage": "nyc check-coverage --statements=80 --branches=80 --functions=80 --lines=80",
+    "check": "npm run check:eslint && npm run check:flow && npm run check:coverage",
+    "check:coverage": "nyc --reporter=html --report-dir=public/coverage --check-coverage --statements=100 --branches=100 --functions=100 --lines=100 npm run test",
+    "check:eslint": "eslint src test",
+    "check:flow": "flow",
     "commit": "git-cz",
-    "cover": "nyc npm run test --report-dir=./public/coverage --reporter=html --reporter=lcov && nyc report --report-dir=./public/coverage",
-    "deploy": "npm run check && npm run build && firebase deploy",
-    "flow": "flow",
-    "lint": "eslint ./src",
-    "report-coverage": "nyc report --report-dir=./public/coverage --reporter=text-lcov > ./public/coverage/coverage.lcov && ./node_modules/.bin/codecov",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "server": "firebase serve",
-    "start": "NODE_ENV=development webpack-dev-server --inline --hot --progress --colors --port=8888",
-    "test": "NODE_ENV=production mocha --recursive --compilers=js:babel-core/register --require=jsdom-global/register",
-    "test:watch": "npm run test -- --watch"
+    "start": "webpack-dev-server --inline --hot --progress --colors --port=8888",
+    "tdd": "npm run test -- --watch",
+    "test": "mocha --recursive --compilers=js:babel-core/register --require=jsdom-global/register"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/bulicmatko/firepack-app.git"
   },
   "keywords": [
+    "kickstart",
     "firepack",
     "firebase",
+    "application",
     "react",
-    "redux",
-    "starter",
-    "boilerplate"
+    "redux"
   ],
   "author": "Matko Bulic <bulicmatko@gmail.com>",
   "license": "MIT",
@@ -39,6 +34,7 @@
   },
   "dependencies": {
     "firebase": "^3.1.0",
+    "firepack": "^0.0.1",
     "immutable": "^3.8.1",
     "lodash": "^4.13.1",
     "react": "^15.2.0",
@@ -57,20 +53,17 @@
     "babel-loader": "^6.2.4",
     "babel-plugin-transform-decorators-legacy": "^1.3.4",
     "babel-plugin-transform-flow-strip-types": "^6.8.0",
-    "babel-plugin-undeclared-variables-check": "^6.8.0",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-react": "^6.11.1",
     "babel-preset-react-hmre": "^1.1.1",
     "babel-preset-stage-0": "^6.5.0",
-    "babel-register": "^6.9.0",
     "bourbon": "^4.2.7",
     "chai": "^3.5.0",
     "chai-immutable": "^1.6.0",
-    "codecov": "^1.0.1",
     "commitizen": "^2.8.2",
     "css-loader": "^0.23.1",
     "cz-conventional-changelog": "^1.1.6",
-    "eslint": "^2.9.0",
+    "eslint": "^2.13.1",
     "eslint-config-airbnb": "^9.0.1",
     "eslint-plugin-import": "^1.10.2",
     "eslint-plugin-jsx-a11y": "^1.5.5",
@@ -84,22 +77,18 @@
     "mocha-jsdom": "^1.1.0",
     "node-sass": "^3.8.0",
     "nyc": "^7.0.0",
-    "redux-devtools": "^3.3.1",
-    "redux-devtools-dock-monitor": "^1.1.1",
-    "redux-devtools-log-monitor": "^1.0.11",
     "resolve-url-loader": "^1.6.0",
     "sass-loader": "^4.0.0",
-    "semantic-release": "^4.3.5",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1"
   },
   "config": {
     "ghooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm run check"
     },
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "node_modules/cz-conventional-changelog"
     }
   },
   "engines": {

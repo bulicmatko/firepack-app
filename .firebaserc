@@ -1,8 +1,10 @@
 {
   // Firebase Configuration File
-  // See https://firebase.google.com/docs/cli/ for more details.
+  // See https://firebase.google.com/docs/cli/#managing_project_aliases for more details.
 
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   // Projects
+  // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   "projects": {
     "default": "firepack-app"
   }

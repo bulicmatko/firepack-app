@@ -9,19 +9,21 @@
 import { fromJS } from 'immutable';
 import { createReducer } from 'firepack';
 
+import { FIREPACK_APP } from '../../constants/actionTypes.const';
+
 /**
  *  Initial State
  */
 const initState = fromJS({
-  greet: false,
+  backgroundColor: 'white',
 });
 
 /**
  *  Reducer
  */
 export default createReducer({
-  HELLO: state => (
-    state.set('greet', true)
+  [FIREPACK_APP.SET_BACKGROUND_COLOR]: (state, payload) => (
+    state.set('backgroundColor', payload.color)
   ),
 }, initState);
 

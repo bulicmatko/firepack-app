@@ -10,7 +10,7 @@ import React, { Component, PropTypes } from 'react';
 import cssModules from 'react-css-modules';
 import noop from 'lodash/noop';
 
-import styles from './styles';
+import styles from './styles'; // eslint-disable-line
 
 /**
  *  Welcome Page

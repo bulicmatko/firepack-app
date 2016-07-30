@@ -15,7 +15,7 @@ import reducer from './reducer';
 import firebaseConfig from './firebase/config';
 import firebaseAuthProviders from './firebase/authProviders';
 
-import './styles/global';
+import './styles/global'; // eslint-disable-line
 
 /**
  *  App
@@ -23,7 +23,7 @@ import './styles/global';
 export default () => (
   <Firepack
     appTitle="Firepack App"
-    appDescription="Kickstart your Firepack application"
+    appDescription="Kickstart your Firepack application development"
     routes={routes}
     reducer={reducer}
     firebaseConfig={firebaseConfig}
