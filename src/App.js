@@ -7,22 +7,26 @@
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
 
 import React from 'react';
-
-import Firepack from '../firepack';
+import Firepack from 'firepack';
 
 import routes from './routes';
+import reducer from './reducer';
 
 import firebaseConfig from './firebase/config';
+import firebaseAuthProviders from './firebase/authProviders';
 
-import menu from './config/menu';
+import './styles/global'; // eslint-disable-line
 
 /**
  *  App
  */
 export default () => (
   <Firepack
-    firebaseConfig={firebaseConfig}
+    appTitle="Firepack App"
+    appDescription="Kickstart your Firepack application development"
     routes={routes}
-    menu={menu}
+    reducer={reducer}
+    firebaseConfig={firebaseConfig}
+    firebaseAuthProviders={firebaseAuthProviders}
   />
 );
