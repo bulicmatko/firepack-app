@@ -21,9 +21,9 @@ export default class extends Component {
 
   static propTypes = {
     user: PropTypes.shape({
-      email: PropTypes.string.isRequired,
-      photoURL: PropTypes.string.isRequired,
-      displayName: PropTypes.string.isRequired,
+      email: PropTypes.string,
+      photoURL: PropTypes.string,
+      displayName: PropTypes.string,
     }).isRequired,
     onSignOut: PropTypes.func.isRequired,
   };
@@ -48,9 +48,15 @@ export default class extends Component {
     return (
       <div styleName="WelcomePage">
         <div styleName="WelcomePage--Content">
-          <img src={user.photoURL} alt={user.displayName} />
-          <h1>{user.displayName}</h1>
-          <p>{user.email}</p>
+          {user.photoURL && (
+            <img src={user.photoURL} alt={user.displayName} />
+          )}
+          {user.displayName && (
+            <h1>{user.displayName}</h1>
+          )}
+          {user.email && (
+            <p>{user.email}</p>
+          )}
           <button onClick={this.handleSignOut}>
             Sign out
           </button>

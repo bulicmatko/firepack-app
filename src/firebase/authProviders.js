@@ -9,9 +9,10 @@
 /**
  *  Firebase Auth Providers
  */
-export default [
-  'Facebook',
-  'Twitter',
-  'Google',
-  'Github',
-];
+export default {
+  EmailAndPassword: true,
+  Facebook: true,
+  Twitter: true,
+  Google: true,
+  Github: true,
+};
