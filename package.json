@@ -9,6 +9,7 @@
     "check:eslint": "eslint src test",
     "check:flow": "flow",
     "commit": "git-cz",
+    "deploy": "firebase deploy",
     "server": "firebase serve",
     "start": "webpack-dev-server --inline --hot --progress --colors --port=8888",
     "tdd": "npm run test -- --watch",
