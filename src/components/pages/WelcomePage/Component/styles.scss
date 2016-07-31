@@ -44,6 +44,7 @@
 
     display: inline-block;
     padding: rem(11) rem(30) rem(9); box-sizing: border-box;
+    outline: none;
 
     border: rem(1) solid color('blue-grey', '600'); border-radius: rem(2);
     background-color: color('white', '500');

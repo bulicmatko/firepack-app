@@ -1,5 +1,5 @@
 # Firepack App
-> Kickstart your [Firepack](https://github.com/bulicmatko/firepack/) application development
+> Kickstart your [Firepack](https://github.com/bulicmatko/firepack/) application
 
 [![Build Status](https://img.shields.io/travis/bulicmatko/firepack-app.svg?style=flat-square)](https://travis-ci.org/bulicmatko/firepack-app)
 [![Code Coverage Status](https://img.shields.io/codecov/c/github/bulicmatko/firepack-app.svg?style=flat-square)](https://codecov.io/github/bulicmatko/firepack-app)
@@ -13,7 +13,7 @@
 a **subject of breaking changes** in near future.
 
 ## Demo
-To see it in action please check the [demo](https://firepack-app.firebaseapp.com/).
+To see it in action, please check the [demo](https://firepack-app.firebaseapp.com/).
 
 ## Contributing
 If you want to contribute or share your ideas, please feel free to [contact me](mailto:bulicmatko@gmail.com).

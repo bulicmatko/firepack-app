@@ -23,7 +23,7 @@ import './styles/global'; // eslint-disable-line
 export default () => (
   <Firepack
     appTitle="Firepack App"
-    appDescription="Kickstart your Firepack application development"
+    appDescription="Kickstart your Firepack application"
     routes={routes}
     reducer={reducer}
     firebaseConfig={firebaseConfig}
