@@ -20,6 +20,8 @@
 .WelcomePage--Content {
   text-align: center;
   padding: rem(60) 0;
+  max-width: rem(380);
+  margin: 0 auto;
 
   > img {
     width: rem(80); height: rem(80);
@@ -34,8 +36,13 @@
   }
 
   > p {
-    color: color('grey', '600');
-    margin-bottom: rem(10);
+    color: color('grey', '600'); line-height: rem(20); font-weight: 300;
+    margin-bottom: rem(30);
+
+    > a {
+      color: color('light-blue', '600');
+      text-decoration: none;
+    }
   }
 
   > button {
@@ -43,7 +50,7 @@
     color: color('blue-grey', '800');
 
     display: inline-block;
-    margin-top: rem(50);
+    margin-top: rem(30);
     padding: rem(11) rem(30) rem(9); box-sizing: border-box;
     outline: none;
 
