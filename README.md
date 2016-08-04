@@ -21,27 +21,40 @@ Firepack App is a simple application starter for Firepack.
 
 ## How can I use Firepack App
 
-1. Clone the repo
+I. Clone the repo
 
+```
     git clone https://github.com/bulicmatko/firepack-app.git <your-app-name>
+```
 
-2. Navigate to created folder
+II. Navigate to newly created folder
 
+```
     cd <your-app-name>
+```
 
-3. Install
+III. Install
 
+```
     npm i
+```
 
-4. Start the app (in development mode)
+IV. Start the app (*in development mode*)
 
+```
     npm start
+```
 
-5. Open your browser at `http://localhost:8888/auth`
+V. Open your browser at `http://localhost:8888`
 
-6. Edit source code and enjoy :)
+VI. Edit source code and build something amazing :)
 
-7. Check npm scripts in `package.json` to see what this starter offers 
+
+**Note**: To preview your app in *production* mode run `npm run build`, then `npm run server` and then
+open your browser at `http://localhost:5000`.
+
+
+#### Feel free to look around 🙃
 
 
 ## Need more docs?
