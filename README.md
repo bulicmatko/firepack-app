@@ -9,15 +9,27 @@
 [![NPM Status](https://img.shields.io/npm/l/firepack-app.svg?style=flat-square)](https://github.com/bulicmatko/firepack-app/blob/master/LICENSE)
 
 ### DISCLAIMER
+
 **Firepack App** is in its **early phase of development** and can be
 a **subject of breaking changes** in near future.
 
+
+## What is Firepack App
+
+Firepack App is a simple application starter for Firepack.
+
+
 ## Demo
+
 To see it in action, please check the [demo](https://firepack-app.firebaseapp.com/).
 
+
 ## Contributing
+
 If you want to contribute or share your ideas, please feel free to [contact me](mailto:bulicmatko@gmail.com).
 
+
 ## License
+
 Copyright (c) 2016 [Matko Bulic](mailto:bulicmatko@gmail.com)  
 Licensed under the [MIT License](https://github.com/bulicmatko/firepack-app/blob/master/LICENSE)
