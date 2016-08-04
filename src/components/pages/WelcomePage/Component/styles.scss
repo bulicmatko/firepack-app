@@ -35,7 +35,7 @@
 
   > p {
     color: color('grey', '600');
-    margin-bottom: rem(50);
+    margin-bottom: rem(10);
   }
 
   > button {
@@ -43,6 +43,7 @@
     color: color('blue-grey', '800');
 
     display: inline-block;
+    margin-top: rem(50);
     padding: rem(11) rem(30) rem(9); box-sizing: border-box;
     outline: none;
 
